@@ -9,6 +9,10 @@
 #import "SwtichViewContoller.h"
 
 @interface SwtichViewContoller ()
+@property (weak, nonatomic) IBOutlet UISegmentedControl *selector;
+@property (weak, nonatomic) IBOutlet UIButton *tellBtn;
+@property (weak, nonatomic) IBOutlet UILabel *truthLabel;
+
 
 @end
 
@@ -21,6 +25,10 @@
 
 - (IBAction)returnBtn:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+- (IBAction)tellBtnPressed:(id)sender {
+    
+    self.truthLabel.text = [NSString stringWithFormat:@"Recently, you pressed \"Tell me\" button\n with %.ld fact selected",(self.selector.selectedSegmentIndex+1)];
 }
 
 
