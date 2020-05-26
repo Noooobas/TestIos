@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11BF50FA247D3A84006FB115 /* ViewControllerWithTables.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BF50F9247D3A84006FB115 /* ViewControllerWithTables.m */; };
 		11F8BEFB2475024E00CFEE4F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F8BEFA2475024E00CFEE4F /* AppDelegate.m */; };
 		11F8BEFE2475024E00CFEE4F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F8BEFD2475024E00CFEE4F /* SceneDelegate.m */; };
 		11F8BF012475024E00CFEE4F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F8BF002475024E00CFEE4F /* ViewController.m */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11BF50F8247D3A84006FB115 /* ViewControllerWithTables.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewControllerWithTables.h; sourceTree = "<group>"; };
+		11BF50F9247D3A84006FB115 /* ViewControllerWithTables.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewControllerWithTables.m; sourceTree = "<group>"; };
 		11F8BEF62475024E00CFEE4F /* TestIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F8BEF92475024E00CFEE4F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		11F8BEFA2475024E00CFEE4F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -82,6 +85,8 @@
 				11F8BF072475025000CFEE4F /* LaunchScreen.storyboard */,
 				11F8BF0A2475025000CFEE4F /* Info.plist */,
 				11F8BF0B2475025000CFEE4F /* main.m */,
+				11BF50F8247D3A84006FB115 /* ViewControllerWithTables.h */,
+				11BF50F9247D3A84006FB115 /* ViewControllerWithTables.m */,
 			);
 			path = TestIos;
 			sourceTree = "<group>";
@@ -117,6 +122,7 @@
 				TargetAttributes = {
 					11F8BEF52475024E00CFEE4F = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -158,6 +164,7 @@
 			files = (
 				11F8BF012475024E00CFEE4F /* ViewController.m in Sources */,
 				11F8BF232475196A00CFEE4F /* TableViewController.m in Sources */,
+				11BF50FA247D3A84006FB115 /* ViewControllerWithTables.m in Sources */,
 				11F8BEFB2475024E00CFEE4F /* AppDelegate.m in Sources */,
 				11F8BF0C2475025000CFEE4F /* main.m in Sources */,
 				11F8BF1D24750D2D00CFEE4F /* SwtichViewContoller.m in Sources */,
@@ -301,6 +308,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TestIos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -309,6 +317,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = orgname.TestIos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestIos/TestIos-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -317,6 +328,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TestIos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -325,6 +337,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = orgname.TestIos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestIos/TestIos-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
