@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //[self.playerView loadWithVideoId:@"f5uik5fgIaI"];
 }
 
 

@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YTPlayerView.h"
 
 @interface ViewController : UIViewController
+@property (strong, nonatomic) IBOutlet YTPlayerView *playerView;
 
 
 @end

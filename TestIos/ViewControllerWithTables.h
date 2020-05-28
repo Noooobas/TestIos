@@ -7,6 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "Phone.h"
+#import "TV.h"
+#import "TvCell.h"
+#import "consoleCell.h"
+#import "Console.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -14,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong,nonatomic) NSMutableArray *phones;
 @property (strong, nonatomic) NSMutableArray *tvs;
-
+@property (strong,nonatomic) NSMutableArray *consoles;
 @property (strong,nonatomic) NSMutableArray *allTech;
 
 @end

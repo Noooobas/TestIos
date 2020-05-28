@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface tvCell : UITableViewCell
+@interface TvCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *tvName;
 @property (weak, nonatomic) IBOutlet UIImageView *tvImage;
 

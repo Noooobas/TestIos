@@ -1,17 +1,17 @@
 //
-//  tvCell.m
+//  consoleCell.m
 //  TestIos
 //
 //  Created by Alexandr Mednikov on 28/05/2020.
 //  Copyright © 2020 Alexandr Mednikov. All rights reserved.
 //
 
-#import "tvCell.h"
+#import "consoleCell.h"
 
-@implementation tvCell
+@implementation consoleCell
 
-@synthesize tvName;
-@synthesize tvImage;
+@synthesize consoleName;
+@synthesize consoleVideoPlayer;
 
 - (void)awakeFromNib {
     [super awakeFromNib];

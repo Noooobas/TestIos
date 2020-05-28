@@ -7,9 +7,6 @@
 //
 
 #import "ViewControllerWithTables.h"
-#import "Phone.h"
-#import "TV.h"
-#import "tvCell.h"
 
 @implementation phoneCell
 
@@ -32,6 +29,7 @@
     self.title = @"Table desu";
     self.phones = [NSMutableArray arrayWithCapacity:20];
     self.tvs = [NSMutableArray arrayWithCapacity:20];
+    self.consoles = [NSMutableArray arrayWithCapacity:20];
     self.allTech = [NSMutableArray arrayWithCapacity:20];
     Phone *phone = [[Phone alloc] init];
     phone.phoneName = @"HONOR 10i 128Gb";
@@ -58,7 +56,16 @@
     tv.tvImageName = @"samsung";
     [self.tvs addObject:tv];
     [self.allTech addObject:_tvs];
-    
+    Console *console = [[Console alloc] init];
+    console.consoleName = @"Sony Playstation 4";
+    console.videoID = @"Jw8HCFZkBds";
+    [self.consoles addObject:console];
+    console = [[Console alloc] init];
+    console.consoleName = @"Nintendo Switch";
+    console.videoID = @"Mf5uik5fgIaI";
+    [self.consoles addObject:console];
+    [self.allTech addObject:self.consoles];
+        
 }
 
 /*
@@ -84,21 +91,26 @@
         }
         case 1:{
             TV *tv = (TV*)self.allTech[indexPath.section][indexPath.row];
-            tvCell *cell = (tvCell*)[tableView dequeueReusableCellWithIdentifier:@"tvCell"];
+            TvCell *cell = (TvCell*)[tableView dequeueReusableCellWithIdentifier:@"tvCell"];
             cell.tvName.text = tv.tvName;
             cell.tvImage.image =[UIImage imageNamed:tv.tvImageName];
             return cell;
         }
+        case 2:{
+            Console *console = (Console*)self.allTech[indexPath.section][indexPath.row];
+            consoleCell *cell = (consoleCell*)[tableView dequeueReusableCellWithIdentifier:@"consoleCell"];
+            cell.consoleName.text = console.consoleName;
+            [cell.consoleVideoPlayer loadWithVideoId:console.videoID];
+            return cell;
+        }
         default:
+            return nil;
             break;
     }
-    Phone *phone = [self.phones objectAtIndex:indexPath.row];
-    phoneCell *cell = (phoneCell *) [tableView dequeueReusableCellWithIdentifier:@"phoneCell"];
-    cell.phoneName.text = phone.phoneName;
-    cell.phoneDescription.text = phone.phoneDescription;
-    cell.phoneImage.image = [UIImage imageNamed:phone.phoneImageName];
-    return cell;
+ 
 }
+
+
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
@@ -117,6 +129,8 @@
             break;
         case 1:
             return @"Телевизоры";
+        case 2:
+            return @"Игровые консоли";
         default:
             return @"oopsie";
             break;
