@@ -12,6 +12,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ViewControllerWithTables : ViewController
 
+@property (strong,nonatomic) NSMutableArray *phones;
+
+@end
+
+@interface phoneCell:UITableViewCell
+ 
+@property (weak, nonatomic) IBOutlet UILabel *phoneName;
+@property (weak, nonatomic) IBOutlet UIImageView *phoneImage;
+@property (weak, nonatomic) IBOutlet UILabel *phoneDescription;
+
 @end
 
 NS_ASSUME_NONNULL_END

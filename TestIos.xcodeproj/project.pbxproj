@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11A83DC6247F928100BB5A54 /* Phone.m in Sources */ = {isa = PBXBuildFile; fileRef = 11A83DC5247F928100BB5A54 /* Phone.m */; };
 		11BF50FA247D3A84006FB115 /* ViewControllerWithTables.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BF50F9247D3A84006FB115 /* ViewControllerWithTables.m */; };
 		11F8BEFB2475024E00CFEE4F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F8BEFA2475024E00CFEE4F /* AppDelegate.m */; };
 		11F8BEFE2475024E00CFEE4F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F8BEFD2475024E00CFEE4F /* SceneDelegate.m */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11A83DC4247F928100BB5A54 /* Phone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Phone.h; sourceTree = "<group>"; };
+		11A83DC5247F928100BB5A54 /* Phone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Phone.m; sourceTree = "<group>"; };
 		11BF50F8247D3A84006FB115 /* ViewControllerWithTables.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewControllerWithTables.h; sourceTree = "<group>"; };
 		11BF50F9247D3A84006FB115 /* ViewControllerWithTables.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewControllerWithTables.m; sourceTree = "<group>"; };
 		11F8BEF62475024E00CFEE4F /* TestIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +54,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11A83DC3247F921C00BB5A54 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				11A83DC4247F928100BB5A54 /* Phone.h */,
+				11A83DC5247F928100BB5A54 /* Phone.m */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
 		11F8BEED2475024E00CFEE4F = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +82,7 @@
 		11F8BEF82475024E00CFEE4F /* TestIos */ = {
 			isa = PBXGroup;
 			children = (
+				11A83DC3247F921C00BB5A54 /* Objects */,
 				11F8BEF92475024E00CFEE4F /* AppDelegate.h */,
 				11F8BEFA2475024E00CFEE4F /* AppDelegate.m */,
 				11F8BEFC2475024E00CFEE4F /* SceneDelegate.h */,
@@ -166,6 +179,7 @@
 				11F8BF232475196A00CFEE4F /* TableViewController.m in Sources */,
 				11BF50FA247D3A84006FB115 /* ViewControllerWithTables.m in Sources */,
 				11F8BEFB2475024E00CFEE4F /* AppDelegate.m in Sources */,
+				11A83DC6247F928100BB5A54 /* Phone.m in Sources */,
 				11F8BF0C2475025000CFEE4F /* main.m in Sources */,
 				11F8BF1D24750D2D00CFEE4F /* SwtichViewContoller.m in Sources */,
 				11F8BEFE2475024E00CFEE4F /* SceneDelegate.m in Sources */,
