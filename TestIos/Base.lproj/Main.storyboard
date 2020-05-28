@@ -69,7 +69,7 @@
                                                         <constraint firstAttribute="width" constant="116" id="khK-VN-vMn"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMO-ig-xzK">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="PhoneDescription" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMO-ig-xzK">
                                                     <rect key="frame" x="124" y="40" width="250" height="80"/>
                                                     <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -90,6 +90,38 @@
                                             <outlet property="phoneDescription" destination="MMO-ig-xzK" id="PfM-iF-VKo"/>
                                             <outlet property="phoneImage" destination="u8U-2V-qH5" id="GpU-sv-dVH"/>
                                             <outlet property="phoneName" destination="AeS-eX-BTK" id="LFh-ww-2js"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tvCell" rowHeight="203" id="GuA-1x-qew" customClass="tvCell">
+                                        <rect key="frame" x="0.0" y="158" width="374" height="203"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GuA-1x-qew" id="Rnr-PU-yRt">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="203"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="tvName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ex-hZ-eye">
+                                                    <rect key="frame" x="20" y="11" width="334" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1kw-1q-exm">
+                                                    <rect key="frame" x="20" y="40" width="346" height="128"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1kw-1q-exm" firstAttribute="centerX" secondItem="Rnr-PU-yRt" secondAttribute="centerX" id="1AM-iq-cbt"/>
+                                                <constraint firstItem="3ex-hZ-eye" firstAttribute="centerX" secondItem="Rnr-PU-yRt" secondAttribute="centerX" id="Lu6-3q-c5k"/>
+                                                <constraint firstAttribute="trailing" secondItem="3ex-hZ-eye" secondAttribute="trailing" constant="20" id="Uqb-at-flh"/>
+                                                <constraint firstItem="1kw-1q-exm" firstAttribute="top" secondItem="3ex-hZ-eye" secondAttribute="bottom" constant="8" id="Yo2-aZ-AxX"/>
+                                                <constraint firstItem="3ex-hZ-eye" firstAttribute="leading" secondItem="Rnr-PU-yRt" secondAttribute="leading" constant="20" id="aa6-hg-Fcu"/>
+                                                <constraint firstAttribute="bottom" secondItem="1kw-1q-exm" secondAttribute="bottom" constant="35" id="gLx-MY-09O"/>
+                                                <constraint firstItem="3ex-hZ-eye" firstAttribute="top" secondItem="Rnr-PU-yRt" secondAttribute="top" constant="11" id="nPs-VP-5TB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="tvImage" destination="1kw-1q-exm" id="q4i-At-vaV"/>
+                                            <outlet property="tvName" destination="3ex-hZ-eye" id="6Jj-VY-h7Z"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

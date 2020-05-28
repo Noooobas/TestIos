@@ -8,6 +8,8 @@
 
 #import "ViewControllerWithTables.h"
 #import "Phone.h"
+#import "TV.h"
+#import "tvCell.h"
 
 @implementation phoneCell
 
@@ -23,11 +25,14 @@
 @end
 
 @implementation ViewControllerWithTables
+@synthesize allTech;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Table desu";
     self.phones = [NSMutableArray arrayWithCapacity:20];
+    self.tvs = [NSMutableArray arrayWithCapacity:20];
+    self.allTech = [NSMutableArray arrayWithCapacity:20];
     Phone *phone = [[Phone alloc] init];
     phone.phoneName = @"HONOR 10i 128Gb";
     phone.phoneDescription = @"ОС Android 9, экран: 6.21\", 2340×1080, процессор: Kirin 710F, 2200МГц, 8-ми ядерный, FM-радио, GPS, ГЛОНАСС, чехол в комплекте, оперативная память: 4Гб, встроенная память: 128Гб";
@@ -43,6 +48,17 @@
     phone.phoneDescription = @"ОС iPhone iOS 13, экран: 6.1\", IPS, 1792×828, процессор: Apple A12 Bionic, , GPS, ГЛОНАСС, с защитой от пыли и влаги, время работы в режиме разговора, до: 25ч, встроенная память: 64Гб";
     phone.phoneImageName = @"iPhoneXR";
     [self.phones addObject:phone];
+    [self.allTech addObject: self.phones];
+    TV *tv = [[TV alloc] init];
+    tv.tvName = @"LED телевизор LG 43UK6200PLA Ultra HD 4K";
+    tv.tvImageName = @"lg";
+    [self.tvs addObject:tv];
+    tv = [[TV alloc] init];
+    tv.tvName = @"LED телевизор SAMSUNG UE43NU7090UXRU Ultra HD 4K";
+    tv.tvImageName = @"samsung";
+    [self.tvs addObject:tv];
+    [self.allTech addObject:_tvs];
+    
 }
 
 /*
@@ -56,6 +72,26 @@
 */
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    switch (indexPath.section) {
+        case 0: {
+            Phone *phone = (Phone*)self.allTech[indexPath.section][indexPath.row];
+            phoneCell *cell = (phoneCell *) [tableView dequeueReusableCellWithIdentifier:@"phoneCell"];
+            cell.phoneName.text = phone.phoneName;
+            cell.phoneDescription.text = phone.phoneDescription;
+            cell.phoneImage.image = [UIImage imageNamed:phone.phoneImageName];
+            return cell;
+            break;
+        }
+        case 1:{
+            TV *tv = (TV*)self.allTech[indexPath.section][indexPath.row];
+            tvCell *cell = (tvCell*)[tableView dequeueReusableCellWithIdentifier:@"tvCell"];
+            cell.tvName.text = tv.tvName;
+            cell.tvImage.image =[UIImage imageNamed:tv.tvImageName];
+            return cell;
+        }
+        default:
+            break;
+    }
     Phone *phone = [self.phones objectAtIndex:indexPath.row];
     phoneCell *cell = (phoneCell *) [tableView dequeueReusableCellWithIdentifier:@"phoneCell"];
     cell.phoneName.text = phone.phoneName;
@@ -66,12 +102,25 @@
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return self.phones.count;
+    return ((NSMutableArray*)self.allTech[section]).count;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return self.allTech.count;
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    
+    switch (section) {
+        case 0:
+            return @"Телефоны";
+            break;
+        case 1:
+            return @"Телевизоры";
+        default:
+            return @"oopsie";
+            break;
+    }
+}
 
 @end

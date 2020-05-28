@@ -13,6 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ViewControllerWithTables : ViewController
 
 @property (strong,nonatomic) NSMutableArray *phones;
+@property (strong, nonatomic) NSMutableArray *tvs;
+
+@property (strong,nonatomic) NSMutableArray *allTech;
 
 @end
 
